@@ -10,13 +10,9 @@ import { AppContainer } from "./AppContainer/AppContainer";
 
 export class App extends Component {
   state = {
-    contacts: [],
+    contacts: contactsData,
     filter: "",
   };
-
-  componentDidMount() {
-    this.setState({ contacts: contactsData });
-  }
 
   addContact = (name, number) => {
     const normalizedFilter = name.toLowerCase();
